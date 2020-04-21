@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Sup Mate</h1>
+</body>
+    <script>
+    let wins = 0
+    let loses = 0
+    let ties = 0
+    let choices = ["r", "p", "s"]
+
+
+for(let i = 0; i < 10; i++){
+    let userChoice = prompt("r p s")
+    let computerChoice
+    computerChoice = choices[Math.floor(Math.random() * choices.length)]
+    
+        switch(userChoice) {
+            case "r":
+            if (computerChoice === "p"){
+                loses++
+                alert(`computer chose ${computerChoice}`)
+                alert(`your loses = ${loses}`)
+            } else if(computerChoice === "s"){
+                wins++
+                alert(`computer chose ${computerChoice}`)
+                alert(`your wins = ${wins}`)
+            } else {
+                ties++
+                alert(`computer chose ${computerChoice}`)
+                alert(`your ties = ${ties}`)
+            }
+            break;
+
+
+            case "p":
+            if (computerChoice === "s"){
+                loses++
+                alert(`computer chose ${computerChoice}`)
+                alert(`your loses = ${loses}`)
+            } else if(computerChoice === "r"){
+                wins++
+                alert(`computer chose ${computerChoice}`)
+                alert(`your wins = ${wins}`)
+            } else {
+                ties++
+                alert(`computer chose ${computerChoice}`)
+                alert(`your ties = ${ties}`)
+            }
+            break;
+
+
+            case "s":
+            if (computerChoice === "r"){
+                loses++
+                alert(`computer chose ${computerChoice}`)
+                alert(`your loses = ${loses}`)
+            } else if(computerChoice === "p"){
+                wins++
+                alert(`computer chose ${computerChoice}`)
+                alert(`your wins = ${wins}`)
+            } else {
+                ties++
+                alert(`computer chose ${computerChoice}`)
+                alert(`your ties = ${ties}`)
+            }
+            break;
+
+
+            default:
+            alert("you didnt pick a right letter")
+            i--
+            
+        }
+}
+    </script>
+</html>
