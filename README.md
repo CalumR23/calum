@@ -1,2 +1,1 @@
-# calum
-for class activities
+This is my practice class activites repo
